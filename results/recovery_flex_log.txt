@@ -1,0 +1,4 @@
+raw signals 16s
+pools built 28s
+true N   done 107s
+true R   done 177s

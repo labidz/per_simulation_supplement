@@ -1,0 +1,44 @@
+config sha256 7e4ab8fc88fa593011d070f43e9876e3913f125efbdc55a2739c0dc1ad7423e7
+calibrated in 16.3s; shared cost c=0.1798
+cell CRF_CONT     done (31s)
+cell P50_CONT     done (45s)
+cell CUE_CONT     done (59s)
+cell CRF_EXT      done (74s)
+cell P75_EXT      done (88s)
+cell P50_EXT      done (103s)
+cell P25_EXT      done (117s)
+cell CUE_EXT      done (131s)
+cell CRF_LEAN     done (146s)
+cell P50_LEAN     done (160s)
+cell CUE_LEAN     done (173s)
+cell CUE_REV      done (187s)
+cell DEV_CRF      done (201s)
+cell DEV_P50      done (215s)
+cell DEV_CUE      done (229s)
+cell DEV_CUE_N20  done (237s)
+cell DEV_CUEREV   done (252s)
+
+PRE-SPECIFIED HYPOTHESES
+H1a  R    CRF_EXT      vs P75_EXT        expect=gt    diff=   11.42 [   11.21,    11.64] dz= 2.29 -> SUPPORTED
+H1b  R    P75_EXT      vs P50_EXT        expect=gt    diff=   15.92 [   15.67,    16.17] dz= 2.75 -> SUPPORTED
+H1c  R    P50_EXT      vs P25_EXT        expect=gt    diff=   26.80 [   26.48,    27.12] dz= 3.69 -> SUPPORTED
+H2a  CD   P75_EXT      vs CRF_EXT        expect=gt    diff=    1.76 [    1.69,     1.83] dz= 1.09 -> SUPPORTED
+H2b  CD   P50_EXT      vs CRF_EXT        expect=gt    diff=    4.27 [    4.17,     4.38] dz= 1.83 -> SUPPORTED
+H3   CD   P50_EXT      vs CUE_EXT        expect=gt    diff=    2.81 [    2.69,     2.93] dz= 1.04 -> SUPPORTED
+H4   R    P50_EXT      vs CUE_EXT        expect=equiv diff=   -0.10 [   -0.43,     0.26] dz=-0.01 -> SUPPORTED
+H5a  LPs  CUE_REV      vs R:CUE_REV      expect=lt    diff= -298.76 [ -298.81,  -298.71] dz=-269.83 -> SUPPORTED
+H5b  LPs  CUE_REV      vs LPa:CUE_REV    expect=lt    diff= -298.76 [ -298.81,  -298.71] dz=-269.83 -> SUPPORTED
+H6a  U    DEV_P50      vs DEV_CUE_N20    expect=gt    diff=   15.72 [   15.00,    16.43] dz= 0.95 -> SUPPORTED
+H6b  LPa  DEV_P50      vs DEV_CUE_N20    expect=lt    diff=   -4.75 [   -5.01,    -4.50] dz=-0.81 -> SUPPORTED
+
+PLAUSIBILITY (mean persistence in continued-reward cells; T=300)
+{'model': 'N', 'CRF_CONT': 39.4535, 'P50_CONT': 39.4535, 'CUE_CONT': 39.4535, 'plausible': False}
+{'model': 'R', 'CRF_CONT': 300.0, 'P50_CONT': 300.0, 'CUE_CONT': 300.0, 'plausible': True}
+{'model': 'CD', 'CRF_CONT': 300.0, 'P50_CONT': 285.242, 'CUE_CONT': 297.6405, 'plausible': True}
+{'model': 'U', 'CRF_CONT': 300.0, 'P50_CONT': 300.0, 'CUE_CONT': 300.0, 'plausible': True}
+{'model': 'Sp', 'CRF_CONT': 300.0, 'P50_CONT': 300.0, 'CUE_CONT': 300.0, 'plausible': True}
+{'model': 'IG', 'CRF_CONT': 300.0, 'P50_CONT': 300.0, 'CUE_CONT': 300.0, 'plausible': True}
+{'model': 'LPs', 'CRF_CONT': 300.0, 'P50_CONT': 130.9045, 'CUE_CONT': 14.541, 'plausible': False}
+{'model': 'LPa', 'CRF_CONT': 300.0, 'P50_CONT': 300.0, 'CUE_CONT': 300.0, 'plausible': True}
+{'model': 'H', 'CRF_CONT': 300.0, 'P50_CONT': 298.1015, 'CUE_CONT': 299.884, 'plausible': True}
+total 259s

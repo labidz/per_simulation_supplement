@@ -1,0 +1,25 @@
+pool built 8s
+fitted data from N    28s  mean quit times by block [70.8 67.5 69.2 62.3 70.4]
+fitted data from R    49s  mean quit times by block [ 62.5  35.2 297.8   0.    0. ]
+fitted data from CD   68s  mean quit times by block [  5.8  10.  283.8   0.    0. ]
+fitted data from U    87s  mean quit times by block [111.2  84.3 300.  165.4  17.7]
+fitted data from Sp   107s  mean quit times by block [ 90.9  63.5 300.  159.2   5. ]
+fitted data from IG   127s  mean quit times by block [200.8 185.7 300.  151.1 152. ]
+fitted data from LPs  147s  mean quit times by block [ 1.5 43.1  1.2  0.5  3.6]
+fitted data from LPa  168s  mean quit times by block [ 86.8  59.3 300.    0.8   9. ]
+fitted data from H    188s  mean quit times by block [1.480e+01 2.180e+01 2.977e+02 1.000e-01 1.600e+00]
+mismatch data from N    207s
+mismatch data from R    217s
+mismatch data from CD   228s
+mismatch data from U    238s
+mismatch data from Sp   249s
+mismatch data from IG   261s
+mismatch data from LPs  272s
+mismatch data from LPa  282s
+mismatch data from H    292s
+
+individual-level accuracy (AIC): {'N': np.float64(0.98), 'R': np.float64(0.6), 'CD': np.float64(0.87), 'U': np.float64(0.5), 'Sp': np.float64(0.54), 'IG': np.float64(0.8), 'LPs': np.float64(1.0), 'LPa': np.float64(0.9), 'H': np.float64(0.99)}
+group n=40 accuracy: {'N': np.float64(1.0), 'R': np.float64(1.0), 'CD': np.float64(1.0), 'U': np.float64(0.98), 'Sp': np.float64(1.0), 'IG': np.float64(1.0), 'LPs': np.float64(1.0), 'LPa': np.float64(1.0), 'H': np.float64(1.0)}
+group n=40 accuracy under mismatch: {'N': np.float64(1.0), 'R': np.float64(0.95), 'CD': np.float64(0.98), 'U': np.float64(0.0), 'Sp': np.float64(1.0), 'IG': np.float64(0.99), 'LPs': np.float64(0.0), 'LPa': np.float64(0.0), 'H': np.float64(0.0)}
+parameter recovery (Spearman): {'N': {'q': 0.8324930492685442}, 'R': {'c': 0.9345160473033753, 'tau': 0.18309378552928798}, 'CD': {'c': 0.9362427839905202, 'tau': 0.2514576853462517}, 'U': {'c': 0.5919603880443922, 'rho': 0.7902878261868791, 'tau': 0.4341238205123729}, 'Sp': {'c': 0.7139319828719566, 'rho': 0.8317837193140084, 'tau': 0.2832854729205743}, 'IG': {'c': 0.3518526515397241, 'rho': 0.8787931199548317, 'tau': 0.17806506289134966}, 'LPs': {'c': 0.7583721028299298, 'rho': 0.9051270986566354, 'tau': 0.09007645517020622}, 'LPa': {'c': 0.8076042291953778, 'rho': 0.8047679316185107, 'tau': 0.36641643732795065}, 'H': {'c': 0.5953313957977597, 'rho': 0.7610689626812102, 'tau': 0.1691446236273074}}
+done 292s

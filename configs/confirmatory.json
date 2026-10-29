@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "note": "Frozen before any confirmatory seed was used. Exploratory pilot used calibration seed 9001 and evaluation seed 9500 only.",
+  "model": {"T": 300, "N_main": 120, "N_short": 20, "cue_eps": 0.05, "lean_p": 0.10,
+            "lam": 0.95, "a0": 0.5, "b0": 0.5, "h": 0.02, "w": 10, "eta": 0.1, "tau": 0.01,
+            "target": 40.0, "kappa_window": 20, "rho": 0.5, "ref_cell": "P50_EXT"},
+  "seeds": {"cal_seeds": 2000, "cal_seed": 111, "eval_seeds": 2000, "eval_seed": 20260101,
+            "bootstrap": 4000, "bootstrap_seed": 7},
+  "plausibility_rule": "an agent is plausible if mean persistence >= 0.9*T in each of CRF_CONT, P50_CONT, CUE_CONT",
+  "hypotheses": [
+    {"id": "H1a", "model": "R",  "a": "CRF_EXT",  "b": "P75_EXT", "expect": "gt", "basis": "analytic: k* = ln(p n*/(cD-a0))/(-ln(0.5+0.5 lam)) increases with training reward probability p"},
+    {"id": "H1b", "model": "R",  "a": "P75_EXT",  "b": "P50_EXT", "expect": "gt", "basis": "same"},
+    {"id": "H1c", "model": "R",  "a": "P50_EXT",  "b": "P25_EXT", "expect": "gt", "basis": "same"},
+    {"id": "H2a", "model": "CD", "a": "P75_EXT",  "b": "CRF_EXT", "expect": "gt", "basis": "analytic: detection delay ln((1-h)/h)/ln(1/(1-p)) decreases in p"},
+    {"id": "H2b", "model": "CD", "a": "P50_EXT",  "b": "CRF_EXT", "expect": "gt", "basis": "same"},
+    {"id": "H3",  "model": "CD", "a": "P50_EXT",  "b": "CUE_EXT", "expect": "gt", "basis": "analytic: cue-contradicting omission carries log-likelihood ratio ln(1/eps) > ln 2"},
+    {"id": "H4",  "model": "R",  "a": "P50_EXT",  "b": "CUE_EXT", "expect": "equiv", "margin": 3.0, "basis": "analytic: cue-averaged V has identical expected extinction trajectory"},
+    {"id": "H5a", "model": "LPs", "a": "CUE_REV", "b": "R:CUE_REV", "expect": "lt", "basis": "analytic: signed LP = -(j/w)(l_hi-l_lo) for j<=w after a loss jump"},
+    {"id": "H5b", "model": "LPs", "a": "CUE_REV", "b": "LPa:CUE_REV", "expect": "lt", "basis": "same"},
+    {"id": "H6a", "model": "U",   "a": "DEV_P50", "b": "DEV_CUE_N20", "expect": "gt", "basis": "analytic: outcome entropy is 1 bit under unlearnable noise and falls as a cue is learned"},
+    {"id": "H6b", "model": "LPa", "a": "DEV_P50", "b": "DEV_CUE_N20", "expect": "lt", "basis": "analytic: |LP| is ~0 under unlearnable noise and large while a cue is being learned"}
+  ],
+  "signature_contrasts": [
+    {"id": "PREE",      "a": "P50_EXT",   "b": "CRF_EXT",     "desc": "partial (50%) minus continuous reward training, extinction"},
+    {"id": "DOSE",      "a": "P25_EXT",   "b": "P75_EXT",     "desc": "25% minus 75% training reward probability, extinction"},
+    {"id": "LEARN_EXT", "a": "P50_EXT",   "b": "CUE_EXT",     "desc": "unlearnable minus learnable at matched reward rate, extinction"},
+    {"id": "REVERSAL",  "a": "CUE_REV",   "b": "CUE_EXT",     "desc": "cue-outcome reversal with reward unchanged minus extinction"},
+    {"id": "LEAN",      "a": "P50_LEAN",  "b": "P50_EXT",     "desc": "lean 10% reward minus none after 50% training"},
+    {"id": "NOISE_DEV", "a": "DEV_P50",   "b": "DEV_CUE_N20", "desc": "unpaid: unlearnable noise minus learning in progress"},
+    {"id": "MASTERY",   "a": "DEV_CUE",   "b": "DEV_CUE_N20", "desc": "unpaid: mastered minus learning in progress"},
+    {"id": "RELEARN",   "a": "DEV_CUEREV","b": "DEV_CUE",     "desc": "unpaid: relearning after reversal minus mastered"}
+  ]
+}

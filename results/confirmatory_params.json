@@ -1,0 +1,80 @@
+{
+ "cfg": {
+  "T": 300,
+  "N_main": 120,
+  "N_short": 20,
+  "cue_eps": 0.05,
+  "lean_p": 0.1,
+  "lam": 0.95,
+  "a0": 0.5,
+  "b0": 0.5,
+  "h": 0.02,
+  "w": 10,
+  "eta": 0.1,
+  "tau": 0.01,
+  "target": 40.0,
+  "kappa_window": 20,
+  "rho": 0.5,
+  "ref_cell": "P50_EXT",
+  "cal_seeds": 2000,
+  "cal_seed": 111,
+  "eval_seeds": 2000,
+  "eval_seed": 20260101
+ },
+ "params": {
+  "N": {
+   "q": 0.02455415015372031,
+   "achieved": 40.009,
+   "status": "ok"
+  },
+  "R": {
+   "c": 0.17975415867495248,
+   "kappa": 0.0,
+   "status": "ok",
+   "ref_persistence": 39.999
+  },
+  "CD": {
+   "c": 0.17975415867495248,
+   "kappa": 0.0,
+   "status": "ok",
+   "ref_persistence": 10.308
+  },
+  "U": {
+   "c": 0.17975415867495248,
+   "kappa": 0.2109364475248997,
+   "status": "ok",
+   "ref_persistence": 71.57
+  },
+  "Sp": {
+   "c": 0.17975415867495248,
+   "kappa": 0.43631063584229074,
+   "status": "ok",
+   "ref_persistence": 60.045
+  },
+  "IG": {
+   "c": 0.17975415867495248,
+   "kappa": 2.548840436018226,
+   "status": "ok",
+   "ref_persistence": 124.446
+  },
+  "LPs": {
+   "c": 0.17975415867495248,
+   "kappa": 1.176710030019964,
+   "status": "ok",
+   "ref_persistence": 51.3335
+  },
+  "LPa": {
+   "c": 0.17975415867495248,
+   "kappa": 1.176710030019964,
+   "status": "ok",
+   "ref_persistence": 57.9015
+  },
+  "H": {
+   "c": 0.17975415867495248,
+   "kappa": 0.35033079466358913,
+   "status": "ok",
+   "ref_persistence": 22.448
+  }
+ },
+ "config_sha256": "7e4ab8fc88fa593011d070f43e9876e3913f125efbdc55a2739c0dc1ad7423e7"
+}
